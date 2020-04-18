@@ -5,7 +5,7 @@ var user_id;
   if(location.hash.substring(1,2) == 'p')
   {
     //alert("p");
-    console.log( "this script is Pi version mobile !" );
+    console.log( "this script is Pi version ramsing !" );
     console.log(location.hash);
     roomHash = location.hash.substring(2,8);
     console.log(roomHash);
@@ -13,7 +13,7 @@ var user_id;
     isthispi = true;
   }
   else {
-    console.log( "this script is not Pi version mobile !" );
+    console.log( "this script is not Pi version ramsing !" );
     console.log(location.hash);
     roomHash = location.hash.substring(1,7);
     user_id = location.hash.substring(7);
@@ -54,11 +54,11 @@ drone.on('open', error => {
   // connected to the room (including us). Signaling server is ready.
   room.on('members', members => {
     console.log('MEMBERS', members);
-    updateMemberList(members.length);
+  //  updateMemberList(members.length);
     // If we are the second user to connect to the room we will be creating the offer
     const isOfferer = members.length === 2;
     startWebRTC(isOfferer);
-    updateMemberList(members.length);
+  //  updateMemberList(members.length);
 
   });
 });
